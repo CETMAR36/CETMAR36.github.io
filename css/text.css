@@ -1,0 +1,197 @@
+<style type="text/css">
+
+body {
+	font: 100%/1.4 Arial, Helvetica, sans-serif;
+	background: #42413C;
+	margin: 0;
+	padding: 0;
+	color:#000;
+}
+h1 {
+	color:#631010;
+	font-size:20px;
+	padding-top: 24px;
+}
+
+h2 {
+	color:#131961;
+	font-size:19px;
+	padding-top: 24px;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 20;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+
+
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	font: 100%/1.4 Arial, Helvetica, sans-serif;
+	text-align:justify;
+	background: url(../img/back_3.png) fixed;
+	margin: 0;
+	padding: 0;
+	color:#000;
+	width: 960px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: url(../img/back_1.png) fixed;
+	font: 100%/1.4 Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color:#006;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+
+	padding: 10px 0;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background:  url(../img/back_1.png) fixed;
+	font: smaller Arial, Helvetica, sans-serif;
+}
+
+.navega {
+	padding: 10px 10px;
+	background:#600;
+	text-align:right;
+	font: 100%/1.4 Arial, Helvetica, sans-serif;
+	color:#FFF;
+}
+
+.rrss {
+	padding: 10px 10px;
+	text-align:right;
+	width: 90%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	display: block;
+}
+
+
+.contenedor-flexbox {
+    display: flex; /*Convertimos al menú en flexbox*/
+    justify-content: space-between; /*Con esto le indicamos que margine todos los items que se encuentra adentro hacia la derecha e izquierda*/
+    align-items: center; /*con esto alineamos de manera vertical*/
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+#unidades {
+	top:0;
+	right:8px;
+}
+
+#unidades ul {
+}
+#unidades ul li {
+	float:right;
+	
+}
+
+#unidades ul li a {
+	background:#540B24;
+	padding:4px 16px;
+	text-decoration:none;
+	-moz-border-radius:0 0 8px 8px;
+	margin-left:4px;
+	-moz-box-shadow: inset 2px 0 2px rgba(0, 0, 0, .7);
+	-webkit-box-shadow: inset 2px 0 2px rgba(0, 0, 0, .7);
+	-o-box-shadow: inset 2px 0 2px rgba(0, 0, 0, .7);
+}
+
+
+#unidades ul li a.nuevo {
+	padding-bottom:6px;
+	color:#FFF;
+	background: #631432; /* for non-css3 browsers */
+}
+
+
+#unidades ul li a:hover {
+	background:#646464;
+	color:#fff;
+}
+
+#unidades ul li a.actual {
+	padding-bottom:6px;
+	color:#FFF;
+	background: #7C2244; /* for non-css3 browsers */
+ filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7C2244', endColorstr='#a1a1a1'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#7C2244), to(#960F43)); /* for webkit browsers */
+	background: -moz-linear-gradient(top, #43362D, #645246); /* for firefox 3.6+ */
+	text-shadow:1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 110%;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666666;
+	text-align: center;}
+	
+a.text:hover {
+	text-decoration: underline;
+	font-size: 11px;
+	color: #35A3AF;!important;
+}
+a.text:link {
+	text-decoration: underline;
+	font-size: 11px;
+	color: #666666; !important;
+}
+
+a:link {
+	text-decoration: none; 
+}
+a:hover {
+	text-decoration:underline;	
+}
+a:visited {
+	text-decoration: none;
+}
+
+</style>
